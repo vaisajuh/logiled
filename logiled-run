@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Run logiled from the source tree without installing it.
+exec python3 -c 'import sys; sys.path.insert(0, sys.argv[1]); sys.argv = sys.argv[1:]; sys.argv[0] = "logiled"; from logiled.cli import main; main()' "$(dirname "$(readlink -f "$0")")" "$@"

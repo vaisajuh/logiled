@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Logitech Mouse Control
+Comment=Lighting, DPI and polling rate for Logitech mice
+Exec=logiled gui
+Icon=input-mouse
+Terminal=false
+Categories=Settings;HardwareSettings;

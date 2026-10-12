@@ -1,0 +1,3 @@
+# Give the locally logged-in user access to Logitech HID++ devices (hidraw),
+# so logiled can run without sudo. Must sort before 73-seat-late.rules for uaccess.
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", TAG+="uaccess"
