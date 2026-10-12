@@ -93,7 +93,7 @@ Bug reports and pull requests are welcome.
 - `logiled/hidpp.py`, `logiled/device.py` are also bundled in
   [clcr](https://github.com/vaisajuh/clcr), the Computer Lighting Control
   Center. You don't need to change clcr yourself: after your pull request is
-  merged here, clcr's nightly sync opens a pull request there with the change.
+  merged here, clcr's automatic sync opens a pull request there with the change.
   If you change functions or classes in these files, say so in your pull
   request, since clcr's GUI uses them.
 - Want to add a different device or brand? See clcr's
