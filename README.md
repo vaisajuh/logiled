@@ -1,5 +1,7 @@
 # logiled
 
+[![Tests](https://github.com/vaisajuh/logiled/actions/workflows/tests.yml/badge.svg)](https://github.com/vaisajuh/logiled/actions/workflows/tests.yml)
+
 Control the lighting, DPI, polling rate and onboard-profile mode of Logitech
 HID++ 2.0 mice on Linux. Built for the **G502 (SE) HERO**, but it should work on
 other Logitech mice with the `COLOR_LED_EFFECTS` (0x8070) feature.
@@ -79,11 +81,33 @@ Layout: `logiled/hidpp.py` (HID++ transport over hidraw), `logiled/device.py`
 - **Tests** run the real transport against a simulated mouse on the other end
   of a socket pair, so the packet encoding is tested without hardware.
 
+## Contributing
+
+Bug reports and pull requests are welcome.
+
+- Report bugs and ask questions in [issues](https://github.com/vaisajuh/logiled/issues).
+- Run the tests before opening a pull request: `python3 -m unittest discover -s tests -v`.
+  They use an emulated device, so no hardware is needed, and they also run
+  automatically on every pull request.
+- Use only the Python standard library (no third-party dependencies).
+- `logiled/hidpp.py`, `logiled/device.py` are also bundled in
+  [clcr](https://github.com/vaisajuh/clcr), the Computer Lighting Control
+  Center. You don't need to change clcr yourself: after your pull request is
+  merged here, clcr's nightly sync opens a pull request there with the change.
+  If you change functions or classes in these files, say so in your pull
+  request, since clcr's GUI uses them.
+- Want to add a different device or brand? See clcr's
+  [CONTRIBUTING.md](https://github.com/vaisajuh/clcr/blob/main/CONTRIBUTING.md#adding-a-new-device).
+
+## Maintainer
+
+Maintained by **Juha Väisänen** ([@vaisajuh](https://github.com/vaisajuh)).
+
 ## Related projects
 
 Part of a small set of Linux lighting tools, all pure Python with no third-party dependencies:
 
-- [clcr](https://github.com/vaisajuh/clcr): Lighting Control Center: one tkinter desktop app for all three devices below (bundles their drivers)
+- [clcr](https://github.com/vaisajuh/clcr): Computer Lighting Control Center, one desktop app for lighting across brands and devices (bundles the drivers below)
 - [akkoctl](https://github.com/vaisajuh/akkoctl): Akko 5075B Plus-S keyboard: RGB backlight, sidelights, keymap and macros
 - [caselight](https://github.com/vaisajuh/caselight): ASUS Aura USB controller: motherboard and ARGB header lighting
 - **logiled** (this repo): Logitech G502 HERO mouse: lighting, DPI, polling rate and onboard mode
