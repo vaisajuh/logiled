@@ -108,8 +108,8 @@ Maintained by **Juha Väisänen** ([@vaisajuh](https://github.com/vaisajuh)).
 Part of a small set of Linux lighting tools, all pure Python with no third-party dependencies:
 
 - [clcr](https://github.com/vaisajuh/clcr): Computer Lighting Control Center, one desktop app for lighting across brands and devices (bundles the drivers below)
-- [akkoctl](https://github.com/vaisajuh/akkoctl): Akko 5075B Plus-S keyboard: RGB backlight, sidelights, keymap and macros
-- [caselight](https://github.com/vaisajuh/caselight): ASUS Aura USB controller: motherboard and ARGB header lighting
+- [viactl](https://github.com/vaisajuh/viactl): VIA/QMK keyboards (tested on Akko 5075B Plus-S): RGB backlight, sidelights, keymap and macros
+- [caselight](https://github.com/vaisajuh/caselight): motherboard and case lighting (currently ASUS Aura)
 - **logiled** (this repo): Logitech G502 HERO mouse: lighting, DPI, polling rate and onboard mode
 
 ## License
